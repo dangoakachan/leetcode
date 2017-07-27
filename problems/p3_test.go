@@ -1,15 +1,15 @@
-package leetcode
+package problems
 
 import (
 	"testing"
 )
 
-type LongestSubstringCase struct {
+type P3Case struct {
 	str   string
 	count int
 }
 
-var LongestSubstringCases = []LongestSubstringCase{
+var P3Cases = []P3Case{
 	{"abcabcbb", 3},
 	{"abcacbe", 4},
 	{"bbbb", 1},
@@ -21,7 +21,7 @@ var LongestSubstringCases = []LongestSubstringCase{
 }
 
 func TestLengthOfLongestSubstring(t *testing.T) {
-	for _, item := range LongestSubstringCases {
+	for _, item := range P3Cases {
 		result := lengthOfLongestSubstring(item.str)
 
 		if result != item.count {

@@ -1,16 +1,20 @@
-package leetcode
+package problems
 
 import (
 	"testing"
+
+	"github.com/dangoakachan/leetcode/common"
 )
 
-type AddTwoNumbersCase struct {
+// P2Case defines the single test case for problem
+type P2Case struct {
 	l1   []int
 	l2   []int
 	want []int
 }
 
-var AddTwoNumbersCases = []AddTwoNumbersCase{
+// P2Cases is a list of test cases for problem
+var P2Cases = []P2Case{
 	{[]int{2, 4, 3}, []int{5, 6, 4}, []int{7, 0, 8}},
 	{[]int{2, 4, 3}, []int{5, 6, 4, 5}, []int{7, 0, 8, 5}},
 	{[]int{}, []int{}, nil},
@@ -18,6 +22,7 @@ var AddTwoNumbersCases = []AddTwoNumbersCase{
 	{nil, nil, nil},
 }
 
+// Generates a list from the input array
 func makeList(arr []int) *ListNode {
 	head := &ListNode{0, nil}
 	tail := head
@@ -30,6 +35,7 @@ func makeList(arr []int) *ListNode {
 	return head.Next
 }
 
+// Converts the list to an array
 func convertToSlice(l1 *ListNode) []int {
 	var arr []int
 
@@ -42,10 +48,10 @@ func convertToSlice(l1 *ListNode) []int {
 }
 
 func TestAddTwoNumbers(t *testing.T) {
-	for _, item := range AddTwoNumbersCases {
+	for _, item := range P2Cases {
 		result := convertToSlice(addTwoNumbers(makeList(item.l1), makeList(item.l2)))
 
-		if !compareSlice(result, item.want) {
+		if !common.CompareSlice(result, item.want) {
 			t.Errorf("Add two numbers result: %v, expect: %v", result, item.want)
 		}
 	}

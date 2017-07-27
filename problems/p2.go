@@ -1,5 +1,9 @@
-package leetcode
+package problems
 
+// Problem 2. Add Two Numbers
+// URL: https://leetcode.com/problems/add-two-numbers/tabs/description
+
+// ListNode defines a singly-linked list
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -7,7 +11,7 @@ type ListNode struct {
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	head := &ListNode{0, nil} // sentinel node
-	carry := 0
+	carry := 0                // carray bit
 
 	for tail := head; l1 != nil || l2 != nil || carry != 0; tail = tail.Next {
 		sum := carry

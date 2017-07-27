@@ -1,6 +1,7 @@
-package leetcode
+package common
 
-func compareSlice(a, b []int) bool {
+// CompareSlice check whether the two slices are equal
+func CompareSlice(a, b []int) bool {
 	if a == nil && b == nil {
 		return true
 	}

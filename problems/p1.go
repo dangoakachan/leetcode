@@ -1,4 +1,7 @@
-package leetcode
+package problems
+
+// Problem 1. Two Sum
+// URL: https://leetcode.com/problems/two-sum/tabs/description
 
 func twoSum(nums []int, target int) []int {
 	n := len(nums)
