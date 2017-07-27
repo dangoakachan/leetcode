@@ -10,24 +10,20 @@ func lengthOfLongestSubstring(s string) int {
 		return n
 	}
 
-	tbl := make(map[rune]int, n)
-	lo, max := 0, 0
+	tbl := make(map[byte]int, n)
+	lo, largest := -1, 0
 
-	for i, c := range s {
-		if j, ok := tbl[c]; ok && j >= lo {
-			if i-lo > max {
-				max = i - lo
-			}
-
-			lo = j + 1
+	for i := 0; i < n; i++ {
+		if j, ok := tbl[s[i]]; ok && j > lo {
+			lo = j
 		}
 
-		tbl[c] = i
+		tbl[s[i]] = i
+
+		if i-lo > largest {
+			largest = i - lo
+		}
 	}
 
-	if n-lo > max {
-		max = n - lo
-	}
-
-	return max
+	return largest
 }
