@@ -1,9 +1,7 @@
-package problems
+package leetcode
 
 import (
 	"testing"
-
-	"github.com/dangoakachan/leetcode/common"
 )
 
 // P1Cases is a list of test cases for problem
@@ -25,7 +23,7 @@ func TestTwoSum(t *testing.T) {
 	for _, item := range P1Cases {
 		result := twoSum(item.arr, item.target)
 
-		if !common.CompareSlice(result, item.want) {
+		if !CompareSlice(result, item.want) {
 			t.Errorf("Two sum result: %v, expect: %v", result, item.want)
 		}
 	}
@@ -35,7 +33,7 @@ func TestTwoSum1(t *testing.T) {
 	for _, item := range P1Cases {
 		result := twoSum1(item.arr, item.target)
 
-		if !common.CompareSlice(result, item.want) {
+		if !CompareSlice(result, item.want) {
 			t.Errorf("Two sum result: %v, expect: %v", result, item.want)
 		}
 	}

@@ -1,4 +1,4 @@
-package problems
+package leetcode
 
 // Problem 7. Reverse Integer
 // URL: https://leetcode.com/problems/reverse-integer/description/

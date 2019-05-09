@@ -1,4 +1,4 @@
-package problems
+package leetcode
 
 // Problem 9. Palindrome Number
 // URL: https://leetcode.com/problems/palindrome-number/description/

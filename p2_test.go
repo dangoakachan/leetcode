@@ -1,9 +1,7 @@
-package problems
+package leetcode
 
 import (
 	"testing"
-
-	"github.com/dangoakachan/leetcode/common"
 )
 
 // P2Case defines the single test case for problem
@@ -51,7 +49,7 @@ func TestAddTwoNumbers(t *testing.T) {
 	for _, item := range P2Cases {
 		result := convertToSlice(addTwoNumbers(makeList(item.l1), makeList(item.l2)))
 
-		if !common.CompareSlice(result, item.want) {
+		if !CompareSlice(result, item.want) {
 			t.Errorf("Add two numbers result: %v, expect: %v", result, item.want)
 		}
 	}

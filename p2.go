@@ -1,4 +1,4 @@
-package problems
+package leetcode
 
 // Problem 2. Add Two Numbers
 // URL: https://leetcode.com/problems/add-two-numbers/tabs/description

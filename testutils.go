@@ -1,4 +1,4 @@
-package common
+package leetcode
 
 // CompareSlice check whether the two slices are equal
 func CompareSlice(a, b []int) bool {
